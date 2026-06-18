@@ -1,0 +1,180 @@
+Variables
+0
+Write a program that stores your name and age in variables and prints them in a sentence.
+Numeric Data Types
+0
+Create two variables: one integer and one float. Perform and print the result of addition, subtraction, multiplication, and division.
+Lists vs Tuples
+0
+Create a list of three favorite foods and a tuple of three favorite colors. Try modifying both and observe what happens.
+If Statements
+0
+Write a program that checks whether a number is positive, negative, or zero.
+For Loops
+0
+Use a for loop to print all numbers from 1 to 10.
+While Loops
+0
+Use a while loop to keep asking the user for input until they type "quit".
+Functions
+0
+Write a function called add_numbers(a, b) that returns the sum of two numbers.
+Return Statement
+0
+Modify a function so it returns the square of a number and print the result outside the function.
+Strings
+0
+Write a program that takes a string and prints it in all uppercase and all lowercase.
+Lists
+0
+Create a list of numbers. Add a new number to the list, remove one number, and print the final list.
+Dictionaries
+0
+Create a dictionary storing a person’s name, age, and city. Print each key-value pair.
+Booleans
+0
+Write a program that compares two numbers and prints True if the first is larger, otherwise False.
+Exceptions
+0
+Write a program that asks the user for a number and handles the case where they enter text instead.
+Try / Except Blocks
+0
+Use try and except to safely divide two numbers entered by the user.
+len() Function
+0
+Write a program that prints the length of a list and the length of a string.
+Mutable vs Immutable Objects
+0
+Write a program that modifies a list inside a function and compare it to modifying an integer inside a function.
+Modules
+0
+Import the math module and write a program that prints the square root of a number.
+Variables
+10
+Write a program that asks the user for their first name and last name, stores them in variables, and prints a greeting like "Hello, [first] [last]!".
+Numeric Data Types
+15
+Create a program that converts temperature from Celsius to Fahrenheit. Use a float variable for Celsius and store the result in a float variable. Print both values.
+String Manipulation
+20
+Write a program that takes a sentence as input and prints the number of characters (including spaces) and the number of words in it.
+If-Else Statements
+25
+Write a program that asks for a number and prints "Even" if it's even, otherwise "Odd". Use the modulus operator.
+Palindrome Checker
+100
+Write a function that checks whether a given string is a palindrome (ignoring spaces and case).
+Word Frequency Counter
+100
+Given a text string, count how many times each word appears and store the result in a dictionary.
+Prime Number Generator
+100
+Write a function that returns all prime numbers up to a given number n.
+Fibonacci Sequence (Efficient)
+100
+Generate the first n Fibonacci numbers without using recursion.
+List Deduplication
+100
+Remove duplicate values from a list while preserving the original order.
+Anagram Detector
+100
+Write a function that checks whether two strings are anagrams of each other.
+File Processing
+100
+Read a text file and count the number of lines, words, and characters.
+Binary Search Implementation
+100
+Implement binary search on a sorted list without using built-in search functions.
+Password Validator
+100
+Write a function that checks whether a password meets these rules: At least 8 characters Contains uppercase, lowercase, and a digit
+Matrix Transpose
+100
+Given a 2D list (matrix), return its transpose.
+Merge Two Dictionaries
+100
+Merge two dictionaries. If keys overlap, store the values in a list.
+Longest Word Finder
+100
+Given a sentence, find the longest word. If there’s a tie, return all longest words.
+Custom Sort
+100
+Sort a list of tuples by the second element without using sorted() or .sort().
+Caesar Cipher
+100
+Implement a Caesar cipher that shifts letters by a given number, preserving case.
+Recursive Directory Traversal
+100
+Write a function that prints all file names in a directory and its subdirectories.
+JSON Data Parsing
+100
+Read a JSON file and extract specific fields into a new data structure.
+Command-Line Calculator
+100
+Build a calculator that accepts user input in the form "number operator number" and handles errors gracefully.
+Two-Sum Problem
+100
+Given a list of numbers and a target, return indices of two numbers that add up to the target.
+Log File Analyzer
+100
+Read a log file and identify the most frequent error message.
+Mini Text-Based Game
+100
+Create a simple text-based game with at least: player stats, multiple choices and a win/lose condition.
+LRU Cache Implementation
+1000
+Implement an LRU (Least Recently Used) cache class from scratch with O(1) get and put operations.
+Top-K Frequent Elements
+1000
+Given a large stream of numbers, return the k most frequent elements efficiently.
+Trie (Prefix Tree)
+1000
+Implement a trie supporting insert, search, and prefix queries.
+Graph Cycle Detection
+1000
+Detect cycles in both directed and undirected graphs.
+Dijkstra’s Algorithm
+1000
+Implement Dijkstra’s shortest path algorithm using a priority queue.
+Thread-Safe Counter
+1000
+Build a counter class safe for multi-threaded access and explain race condition prevention.
+Producer–Consumer Queue
+1000
+Implement a producer-consumer system using threads or async tasks.
+Async Web Scraper
+1000
+Build an asynchronous web scraper using asyncio and aiohttp.
+Rate Limiter
+1000
+Implement a token bucket or leaky bucket rate limiter.
+Custom Memory Pool
+1000
+Simulate a memory pool allocator and track allocation/deallocation.
+Plugin Architecture
+1000
+Build a system that dynamically loads and executes plugins at runtime.
+Event-Driven System
+1000
+Design an event dispatcher with subscribers and asynchronous event handling.
+Configuration Manager
+1000
+Load, validate, and hot-reload configuration from JSON/YAML files.
+Dependency Injection Framework
+1000
+Implement a minimal dependency injection container.
+Log Aggregation System
+1000
+Parse distributed log files and generate real-time statistics.
+Expression Evaluator
+1000
+Build an evaluator for mathematical expressions (supports + - * / ()).
+Custom Query Engine
+1000
+Implement a mini query engine for filtering and aggregating in-memory data.
+Fault-Tolerant Task Runner
+1000
+Execute tasks with retries, exponential backoff, and failure logging.
+Property-Based Testing Framework
+1000
+Build a simplified version of property-based testing (like Hypothesis).

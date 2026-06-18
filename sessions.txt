@@ -1,0 +1,32 @@
+{
+    "Damien's Session": {
+        "text_size": " QWidget { font-size: 17px; }",
+        "button_size": " QPushButton { font-size: 37px; }",
+        "theme_name": "Dark",
+        "skill_level": 20
+    },
+    "Abbie's Session": {
+        "text_size": " QWidget { font-size: 12px; }",
+        "button_size": " QPushButton { font-size: 24px; }",
+        "theme_name": "Ocean Blue",
+        "skill_level": 40
+    },
+    "Dylan's Session": {
+        "text_size": " QWidget { font-size: 12px; }",
+        "button_size": " QPushButton { font-size: 32px; }",
+        "theme_name": "Light",
+        "skill_level": 0
+    },
+    "Anna's Session": {
+        "text_size": " QWidget { font-size: 17px; }",
+        "button_size": " QPushButton { font-size: 37px; }",
+        "theme_name": "Dark",
+        "skill_level": 25
+    },
+    "Jacob's Session": {
+        "text_size": " QWidget { font-size: 12px; }",
+        "button_size": " QPushButton { font-size: 32px; }",
+        "theme_name": "Light",
+        "skill_level": -5
+    }
+}
