@@ -39,12 +39,9 @@ from PyQt6.QtWidgets import (
 )
 
 from PyQt6.QtCore import (
-    Qt, QTimer, QRect, QSize,
+    Qt, QTimer, QSize,
     QThread, pyqtSignal, pyqtSlot, QObject
 )
-
-    
-from PyQt6.QtCore import Qt, QTimer, QRect, QSize
 
 from PyQt6.QtGui import (
     QFont,
@@ -89,7 +86,7 @@ def weighted_random_choice(choices, difficulty_bias):
     difficulty_bias > 0 favours higher-indexed (harder) questions,
     difficulty_bias < 0 favours lower-indexed (easier) questions,
     difficulty_bias = 0 gives equal weight to all.
-    Weights are normalized automatically by random.choices.
+    Weights are normalised automatically by random.choices.
     
     Note: This assumes questions are roughly ordered by difficulty.
     """
@@ -193,7 +190,7 @@ class LineNumberArea(QWidget):
         return QSize(self.code_editor.line_number_area_width(), 0)
 
     # Delegate painting back to the main editor class.
-    # This keeps all line-number rendering logic centralized.
+    # This keeps all line-number rendering logic centralised.
     def paintEvent(self, event):
         self.code_editor.line_number_area_paint_event(event)
 
@@ -371,12 +368,12 @@ class CodeEditor(QPlainTextEdit):
 
         def score(word):
             if word == prefix:
-                return (0, len(word))
+                return 0, len(word)
             if word.startswith(prefix):
-                return (1, len(word))
+                return 1, len(word)
             if prefix in word:
-                return (2, len(word))
-            return (3, len(word))
+                return 2, len(word)
+            return 3, len(word)
 
         # Only consider words that contain the prefix at all.
         # Ranking then determines ordering preference.
@@ -401,7 +398,7 @@ class CodeEditor(QPlainTextEdit):
 
     def style_popup(self):
         """
-        Adjust popup colors dynamically to match current theme.
+        Adjust popup colours dynamically to match current theme.
         """
         palette = self.palette()
         background = palette.color(palette.ColorRole.Base).name()
@@ -448,14 +445,6 @@ class CodeEditor(QPlainTextEdit):
         if rect.contains(self.viewport().rect()):
             self.update_line_number_area_width(0)
 
-    def resizeEvent(self, event):
-        super().resizeEvent(event)
-        cr = self.contentsRect()
-        self.line_number_area.setGeometry(
-            QRect(cr.left(), cr.top(),
-                  self.line_number_area_width(), cr.height())
-        )
-
     # Custom painting routine for drawing line numbers
     # aligned with visible text blocks.
     def line_number_area_paint_event(self, event):
@@ -499,7 +488,7 @@ class CodeEditor(QPlainTextEdit):
         if not self.isReadOnly():
             selection = QTextEdit.ExtraSelection()
 
-            # Use theme-aware highlight colors from current palette.
+            # Use theme-aware highlight colours from current palette.
             selection.format.setBackground(self.palette().highlight())
             selection.format.setForeground(self.palette().highlightedText())
 
@@ -1096,6 +1085,7 @@ but you can also write a clarifying question about the question given into the a
 
         # Avoid repeating the last question
         max_attempts = 10
+        selected_question = ""
         for _ in range(max_attempts):
             selected_question = weighted_random_choice(filtered_questions, difficulty_bias)
             if selected_question != self.last_question:
@@ -1271,7 +1261,7 @@ but you can also write a clarifying question about the question given into the a
     def collect_syntax_errors(self, code):
         """
         Collect multiple syntax errors by progressively
-        removing detected error lines and re-parsing.
+        removing detected error lines and reparsing.
         """
         errors = []
         remaining_code = code
@@ -1311,7 +1301,7 @@ but you can also write a clarifying question about the question given into the a
         return errors
 
     # Create visual highlights for each detected syntax error.
-    # Single-character errors are highlighted with background color.
+    # Single-character errors are highlighted with background colour.
     # Multi-character tokens are underlined.
     def highlight_multiple_errors(self, errors):
         """
@@ -1632,8 +1622,8 @@ class MainWindow(QMainWindow):
         self.page_stack.setCurrentWidget(self.start_page)
 
         # Centralized UI style state.
-        # Initialize default UI theme and styling state.
-        # Theme includes stylesheet and error highlight color.
+        # Initialise default UI theme and styling state.
+        # Theme includes stylesheet and error highlight colour.
         self.build_font_styles(config.TEXT_SIZE_DEFAULT, "both")
         self._apply_theme("High Contrast")
 
@@ -1653,7 +1643,7 @@ class MainWindow(QMainWindow):
             self.button_stylesheet = f" QPushButton {{ font-size: {size}px; }}"
 
     def _apply_theme(self, theme_name):
-        """Set theme, error color, and apply combined styles."""
+        """Set theme, error colour, and apply combined styles."""
         self.current_theme_name = theme_name
         theme_data = config.THEMES[theme_name]
         self.current_theme = theme_data["stylesheet"]
@@ -1692,7 +1682,7 @@ class MainWindow(QMainWindow):
         editor.set_error_color(self.current_error_color)
 
         # Force Qt to re-apply stylesheet immediately.
-        # Ensures editor colors update correctly.
+        # Ensures editor colours update correctly.
         editor.style().unpolish(editor)
         editor.style().polish(editor)
         editor.update()
@@ -1753,7 +1743,7 @@ class MainWindow(QMainWindow):
         super().keyPressEvent(event)
 
 # Entry point of the application.
-# Initializes Qt event loop.
+# Initialises Qt event loop.
 def main():
     app = QApplication(sys.argv)
     main_window = MainWindow()
