@@ -1,5 +1,8 @@
 # Year 4 Dissertation Project Extension
 This is the repository where I have uploaded my final dissertation project.
+
+Download the custom Llama 3.2 model I trained specifically for this program extension from https://huggingface.co/DanielFHugging/Finetuned-Model-For-a-Tutor-LLM/tree/main
+
 # User Guide (how to setup the program)
 The first step is for the user to download the aiCodingAssistant.py, the config.py, the questions.txt, and the sessions.txt. They should put all these files in one directory.
 The second step is for the user to download Ollama from ollama.com and set it up so the operating system has a path set to it. The user should use the Ollama documentation at docs.ollama.com/api/introduction, if they have any trouble with the setup.
