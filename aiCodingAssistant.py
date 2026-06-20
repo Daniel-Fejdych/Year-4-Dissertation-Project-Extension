@@ -50,7 +50,7 @@ from PyQt6.QtGui import (
     QTextFormat,
     QTextCursor
 )
-
+import pyttsx3 # For TTS
 
 import config
 
@@ -103,7 +103,14 @@ def weighted_random_choice(choices, difficulty_bias):
     # Use k=1 to generate only one sample
     return random.choices(choices, weights=weights, k=1)[0]
 
-
+# TTS Setup
+def play_tts(text, rate: int=150, voice_id=None):
+    engine = pyttsx3.init()
+    engine.setProperty('rate', rate)
+    if voice_id:
+        engine.setProperty('voice', voice_id)
+    engine.say(text)
+    engine.runAndWait()
 
 # Timeout is set to 180 seconds (hardcoded). Ensure Ollama is running
 # and accessible at OLLAMA_URL before calling this function.
@@ -720,6 +727,7 @@ class AIWorker(QObject):
     def run(self):
         response = ollama_generate(self.prompt)
         self.finished.emit(response)
+        play_tts(response)
 
 
 # <UI Pages>
@@ -1741,6 +1749,7 @@ class MainWindow(QMainWindow):
             self.toggle_fullscreen()
             return
         super().keyPressEvent(event)
+
 
 # Entry point of the application.
 # Initialises Qt event loop.
