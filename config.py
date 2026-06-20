@@ -5,7 +5,7 @@ Contains:
 - Window sizes
 - Skill system tuning
 - Accessibility defaults
-- Question selection behavior
+- Question selection behaviour
 - File paths
 - AI configuration
 - Theme registry
