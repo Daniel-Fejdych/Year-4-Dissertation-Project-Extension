@@ -1,7 +1,8 @@
 # Year 4 Dissertation Project Extension
 This is the repository where I have uploaded my final dissertation project.
 
-Download the custom Llama 3.2 model I trained specifically for this program extension from https://huggingface.co/DanielFHugging/Finetuned-Model-For-a-Tutor-LLM/tree/main
+Download the custom Llama 3.2 model I trained specifically for this project extension from:
+https://huggingface.co/DanielFHugging/Finetuned-Model-For-a-Tutor-LLM/tree/main
 
 # User Guide (how to setup the program)
 The first step is for the user to download the aiCodingAssistant.py, the config.py, the questions.txt, and the sessions.txt. They should put all these files in one directory.
